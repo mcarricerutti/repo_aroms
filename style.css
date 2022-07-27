@@ -1,0 +1,365 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    background-color:#c7bcab ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 22px;
+    height: auto;
+}
+
+/*INICIO*/
+
+#titulo-prin {
+    font-size: 50px;
+    color:#445666;
+    font-family:'Recursiva', sans-serif;
+    text-decoration: underline;
+    padding-top: 2%;
+}
+
+#titu-nav {
+    color: white;
+    padding-top: 8%;
+    font-family:'Recursiva', sans-serif;
+}
+
+aside{
+    margin-bottom: 5%;
+}
+
+.img-inicio{
+    width: 100%;
+    clip-path: polygon(51% 100%, 100% 80%, 100% 0, 0 0, 0 80%);
+}
+
+#texto-img-inicio{
+    margin-top: 150px;
+    margin-bottom: 150px;
+    margin-left: 150px;
+    margin-right: 150px;
+    color: black;
+    font-family:'Recursiva', sans-serif;
+}
+
+
+/*SOBRE MI*/
+
+.presentacion {
+    background-color: rgb(206, 214, 218);
+    width: 100%;
+    margin-top: 12%;
+    margin-bottom: 12%;
+}
+
+#sobremi {
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.titu-sobremi {
+    color: rgba(113, 142, 146, 0.938);
+    padding-bottom: 2%;
+    font-size: 30px;
+    font-family:'Recursiva', sans-serif;
+}
+
+.text-sobremi {
+    color: rgb(138, 126, 126);
+    font-size: 18px;
+}
+
+.img-presentacion {
+    width: 250px;
+    height: 250px;
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-top: 5%;
+    clip-path: circle(50% at 50% 50%);
+}
+
+
+/*MIS VELAS*/
+
+.cont-velas {
+    text-align: center;
+    border-top: solid 2px rgb(104, 121, 115);
+    border-bottom: solid 2px rgb(104, 121, 115);
+    margin-top: 5%;
+    margin-bottom: 15%;
+    padding-bottom: 2%;
+    background-image: url(img/fondo\ velas.jpg);
+}
+
+.titu-velas {
+    padding-top: 2%;
+    font-family:'Recursiva', sans-serif;
+    color: #64798b;
+    font-size: 30px;
+}
+
+.text-velas {
+    font-size: 18px;
+    color:rgb(116, 101, 101);
+}
+
+.cont-img-velas {
+    justify-content: center;
+}
+
+.velas{
+    width: 200px;
+    clip-path: circle(50% at 50% 50%);
+}
+
+/*Precios*/
+.precios {
+    border: none;
+    color: white;
+}
+
+.cont-precios {
+    background-color: rgba(166, 195, 199, 0.6);
+}
+
+.titu-precios {
+    margin-top: 30%;
+    font-size: 40px;
+    text-decoration: underline;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.precios h6 {
+    font-size: 25px;
+    margin-top: 2px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.precios p{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/*AROMAS*/
+
+.cont-aromas {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    background-image: url(img/lavandas.jpg);
+    border: solid 5px #90aac0;
+}
+
+.titu-aromas {
+    padding-top: 2%;
+    padding-bottom: 3%;
+    text-align:end;
+    margin-right: 20%;
+    font-family: 'Recursiva', sans-serif;
+    font-size: 30px;
+    color: #64798b;
+}
+
+.aromas {
+    color: white;
+    font-size: 18px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 5%;
+    text-align: center;
+    border:solid 3px #90aac0;
+    border-radius: 10px;
+    background-color: rgba(113, 142, 146, 0.6);
+}
+
+.nombre-aroma {
+    text-decoration: underline;
+    padding-bottom: 2%;
+}
+
+.parraf-aroma {
+    text-align: center;
+}
+
+
+/*DATITOS*/
+
+.tips {
+    background-color: #aabdcca9;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.titu-tips {
+    font-size: 25px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #5e4d32;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+
+}
+
+.cont-tips {
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:#5e4d32;
+    padding-left: 3%;
+}
+
+.icons {
+    font-size: 50px;
+    color: white;
+    padding: 10px;
+}
+
+
+/*CONTACTO*/
+
+footer {
+    text-align: center;
+    text-align: start;
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+    margin-top: 5px;
+    padding-top: 4px;
+}
+
+.cont-foot {
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.titu-foot {
+    margin-bottom: 4%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.info-foot {
+    margin-bottom: 4%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.info-foot a {
+    color: white;
+}
+
+.info-foot label {
+    color: white;
+}
+
+.btn {
+    background-color: #000000;
+    border:solid 3px #000000;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #90aac0;
+    border: solid 3px #90aac0;
+    color: white;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.redes .btn {
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #90aac0;
+    border: none;
+}
+
+.redes .btn:hover {
+    color: #90aac0;
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*GOTOP*/
+/*
+.go-top-container {
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    width: 4rem;
+    height: 4rem;
+    z-index: -1;
+}
+
+.go-top-button {
+    width: 0rem;
+    height: 0rem;
+    background: #445666;
+    border-radius: 50%;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.go-top-button i {
+    position: absolute;
+    font-size: 1.7rem;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: white;
+    transition: .2s;
+}
+
+.show {
+    z-index: 10;
+}
+
+.show .go-top-button {
+    animation: popup .3s ease-in-out;
+    width: 4rem;
+    height: 4rem;
+    z-index: 11;
+}
+
+.show i {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup {
+    0%{
+        width: 0rem;
+        height: 0rem;
+    }
+    50%{
+        width: 5rem;
+        height: 5rem;
+    }
+    100%{
+        width: 4rem;
+        height: 4rem;
+    }
+}
+*/
