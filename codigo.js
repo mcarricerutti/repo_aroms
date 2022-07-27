@@ -42,8 +42,10 @@
 //Código DESAFÍO ENTREGABLE.
 
 //Saludo INICIAL
+//Le pedimos al usuario que ingrese su nombre
 let usuario=prompt("Ingresa tu nombre");
 function bienvenida() {
+    //Mostramos por pantalla el saludo
     alert("¡Te damos la bienvenida a -AROMS-, "+ usuario + "!");
 }
 bienvenida()
