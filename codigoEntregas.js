@@ -99,24 +99,28 @@ aromasVelas.unshift("Pepino");
 aromasVelas.unshift("Cítricos");
 console.log(aromasVelas);
 
-aromasVelas.splice(5,3);
+//Borramos algunos aromas, el 5, 6 y 7
+aromasVelas.splice(5, 3);
 console.log(aromasVelas);
 
+//Pasamos de array a string
 let aString= aromasVelas.join("\n");
 console.log(aString);
 
+//Creamos nuevos arrays
 const tamanoVela=["Grande","Mediano","Chico"];
 const recipienteVela=["Caramelera","Vasito simple","Con formas"];
 const precioVela=["$700","$800","$900","$920","$1000","$1300","$1400","$1500"];
 
-
+//Aquí concatenamos los nuevos arrays
 const tamanoYrecipiente = (("Tamaños: "+tamanoVela+"\n").concat("Recipientes: "+recipienteVela+"\n"));
 const aromaYprecio = (("Aromas: "+aromasVelas+"\n").concat("Precios: "+precioVela));
 const velas = tamanoYrecipiente.concat(aromaYprecio);
+//Mostramos por consola todos los arrays concatenados
 console.log(velas);
 
 
-
+//Creamos un array de objetos
 const velasPromo=[
     {
         forma: "Corazón",
@@ -144,9 +148,10 @@ const velasPromo=[
         precio: "$645",
     },
 ]
+//Mostramos las promos por consola en una tabla.
 console.table(velasPromo);
 
-
+//Y por último mediante un for of mostramos las promos del día por pantalla
 let pregunta=prompt("¿Quieres saber las promos de hoy? Escribe SI o NO."+"\n"+"-Respeta mayúsculas-");
 for(const vela of velasPromo){
     if(pregunta == "SI"){
@@ -154,6 +159,7 @@ for(const vela of velasPromo){
         alert(presentacion);
     }else{
         alert("Hasta pronto "+usuario);
+        //Usamos un break para que finalice
         break;
     }
 }
