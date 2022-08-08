@@ -233,3 +233,182 @@
 // console.log(velas);
 
 
+
+
+
+// //Declaramos una clase para los aromas 
+// class aromas {
+//     constructor(nombre, disponibilidad) {
+//         this.nombre = nombre,
+//             this.disponibilidad = disponibilidad
+//     }
+//     habilitar() {
+//         let error = "Aroma disponible"
+//         if (this.disponibilidad == false) {
+//             this.disponibilidad = true
+//         } else {
+//             console.log(error);
+//         }
+//     }
+//     deshabilitar() {
+//         let error = "Aroma NO disponible"
+//         if (this.disponibilidad == true) {
+//             this.disponibilidad = false
+//         } else {
+//             console.log(error)
+//         }
+//     }
+// }
+
+
+// //Creamos nuevos objetos de aromas
+// let arom1 = new aromas("Lavanda", true);
+// let arom2 = new aromas("Jazmín", false);
+// let arom3 = new aromas("Vainilla", false);
+// let arom4 = new aromas("Coco", true);
+// let arom5 = new aromas("Sandía", true);
+// let arom6 = new aromas("Chocolate", true);
+// let arom7 = new aromas("Limón", false);
+// let arom8 = new aromas("Canela", true);
+
+// //Array vacío para guardar los datos de aromas
+// const listaAromas = []
+// //Los pusheamos
+// listaAromas.push(arom1, arom2, arom3, arom4, arom5, arom6, arom7, arom8);
+// //Los vemos por consola.
+// console.log(listaAromas);
+// let verAromasDispo = prompt("¿Quieres ver los aromas disponibles?" + "\n" + "SI o NO");
+
+
+// while (verAromasDispo != "NO") {
+//     if (verAromasDispo == "SI") {
+//         const disponibles = listaAromas.filter(aroma=> aroma.disponibilidad == true);
+//         alert(disponibles)
+//     } else {
+//         alert("¡Gracias por tu visita!")
+//         break
+//     }
+//     verAromasDispo = prompt(`¿Quieres seguir viéndolos?, SI o NO`);
+// }
+
+
+
+
+//DESCUENTO
+// //Solicitamos que ingrese el precio 
+// // let precio = parseInt(prompt("Ingresa el costo de tu vela elegida, y te diremos en cuanto queda!"));
+
+// function apliDesc(precio) {
+//     //Aplico 30% de descuento al precio
+//     return (precio * 30) / 100;
+// }
+// //Variable que guada el resultado del descuento
+// let valorDesc = apliDesc(precio);
+
+// //Obtengo precio final mediante resta
+// let precioFinal = precio - valorDesc;
+
+// //PRECIO + IVA
+// //Declaramos variables (de suma y resta) anónimas con función flecha.
+// const suma = (a, b) => a + b
+// const resta = (a, b) => a - b
+
+// //Calculamos el precio con iva
+// const iva = precio => precio * 0.21;
+// let precioOriginal = precio;
+// let precioDesc = valorDesc;
+// //Cálculo el precioOriginal + IVA - Descuento.
+// let precioConIva = resta(suma(precioOriginal, iva(precioOriginal)), precioDesc);
+// //Mostramos por pantalla el resultado
+// // alert("El precio con descuento + IVA seria de: $" + precioConIva);
+
+
+
+
+
+// const Velas=[
+//     {
+//         nombre: "Vela 1",
+//         tamano: "6,5cm",
+//         precio: "$800",
+//         aroma: "Lavanda",
+//         recipiente: "En caramelera",
+//         disponibilidad: true,
+//     },
+//     {
+//         nombre: "Vela 2",
+//         tamano: "6,5cm",
+//         precio: "$700",
+//         aroma: "Limón",
+//         recipiente: "En vasito simple",
+//         disponibilidad: true,
+//     },
+//     {
+//         nombre: "Vela 3",
+//         tamano: "6,5cm",
+//         precio: "$700",
+//         aroma: "Coco",
+//         recipiente: "Con forma",
+//         disponibilidad: true,
+//     },
+//     {
+//         nombre: "Vela 4",
+//         tamano: "8cm",
+//         precio: "$1000",
+//         aroma: "Vainilla",
+//         recipiente: "En caramelera",
+//         disponibilidad: true,
+//     },
+//     {
+//         nombre: "Vela 5",
+//         tamano: "8cm",
+//         precio: "$920",
+//         aroma: "Jazmín",
+//         recipiente: "En vasito simple",
+//         disponibilidad: true,
+//     },
+//     {
+//         nombre: "Vela 6",
+//         tamano: "8cm",
+//         precio: "$900",
+//         aroma: "Canela",
+//         recipiente: "Con forma",
+//         disponibilidad: true,
+//     },
+//     {
+//         nombre: "Vela 7",
+//         tamano: "10cm",
+//         precio: "$1500",
+//         aroma: "Coco",
+//         recipiente: "En caramelera",
+//         disponibilidad: true,
+//     },
+//     {
+//         nombre: "Vela 8",
+//         tamano: "10cm",
+//         precio: "$1400",
+//         aroma: "Limón",
+//         recipiente: "En vasito simple",
+//         disponibilidad: true,
+//     },
+//     {
+//         nombre: "Vela 9",
+//         tamano: "10cm",
+//         precio: "$1300",
+//         aroma: "Vainilla",
+//         recipiente: "Con forma",
+//         disponibilidad: true,
+//     },
+// ]
+
+
+
+// let pregunta = prompt("Quieres ver nuestras velas?")
+// for(const vela of Velas){
+//     if(pregunta == "SI"){
+//         let presentacion = ("Velas del catálogo:  "+ vela.nombre +"\n"+"\n"+ "Tamaño: " +vela.tamano +"\n"+"Precio: "+ vela.precio +"\n"+"Aroma: "+ vela.aroma +"\n"+"Recipiente: "+ vela.recipiente);
+//         alert(presentacion)
+//     }else{
+//         alert("Chauu");
+//     }
+// }
