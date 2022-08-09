@@ -1,18 +1,5 @@
 //1er ENTREGA DEL PROYECTO FINAL.
 
-//Saludo INICIAL
-//Le pedimos al usuario que ingrese su nombre
-let usuario = prompt("Ingresa tu nombre");
-
-function bienvenida() {
-    //Mostramos por pantalla el saludo
-    alert("¡Te damos la bienvenida a -AROMS-, " + usuario + "!");
-}
-bienvenida()
-
-
-//Mostramos por pantalla el aviso del descuento, y llamamos una variable global
-let aviso = alert("¡Para suerte tuya " + usuario + ", hoy tenemos 30% de descuento en todos los productos de la tienda!")
 
 class Producto{
     constructor(numero,tamano,precio,aroma,recipiente,disponibilidad){
@@ -24,7 +11,7 @@ class Producto{
         this.disponibilidad=disponibilidad;
     }
     habilitar(){
-        let error = "libro disponible"
+        let error = "Vela disponible"
         if(this.disponibilidad == false){
             this.disponibilidad = true
         }else{
@@ -32,7 +19,7 @@ class Producto{
         }
     }
     deshabilitar(){
-        let error = "Libro NO disponible"
+        let error = "Vela NO disponible"
         if(this.disponibilidad == true){
             this.disponibilidad = false
         }else{
@@ -121,53 +108,6 @@ const Velas=[
 ]
 
 
-//Con forEach, retornamos los numeros de las velas.
-Velas.forEach(vela => console.log(vela.numero));
-
-//Filtramos las velas disponibles
-const velasDispo=Velas.filter(vela=>vela.disponibilidad == true);
-console.table(velasDispo);
-
-
-//Estructura de las velas en promo
-
-class promo {
-    constructor(forma, tamano, precio) {
-        this.forma = forma,
-            this.tamano = tamano,
-            this.precio = parseInt(precio)
-    }
-}
-
-//Creamos nuevos objetos
-
-let promo1 = new promo("Corazón", "Mediano", 845);
-let promo2 = new promo("Letra", "Chico", 650);
-let promo3 = new promo("Pirámide", "Mediano", 860);
-let promo4 = new promo("Flor", "Grande", 1050);
-let promo5 = new promo("Luna", "Chico", 645);
-
-//Creamos el array donde guardaremos los datos de las promos.
-const promos = [];
-
-//Pusheamos todos los datos.
-promos.push(promo1, promo2, promo3, promo4, promo5);
-
-
-//Y por último mediante un for of mostramos las promos del día por pantalla
-let pregunta = prompt("¿Quieres ver las promos del día? SI o NO." + "\n" + "-Respeta mayúsculas-");
-
-for (const velas of promos) {
-    if (pregunta == "SI") {
-        let presentacion = ("Promos de HOY: " + "\n" + velas.forma + "\n" + velas.tamano + "\n" +"$"+ velas.precio);
-        alert(presentacion);
-    } else if (pregunta == "NO") {
-        alert("¡Gracias por visitar nuestra página " + usuario + "!");
-        //Usamos un break para que finalice
-        break;
-    }
-}
-
 //Creamos el array de carrito.
 const Carrito = []
 
@@ -190,13 +130,13 @@ while (comprar != "S") {
     break;
 }
 
-while(comprar == "SI"){
-let producto = prompt("Agrega un producto a tu carrito (ej: vela 1, promo 4)");
+while(comprar == "SI"|| comprar == "Si" || comprar == "si"){
+let producto = prompt("Agrega un producto a tu carrito (ej: vela 1)");
 let unidades = parseInt(prompt("¿Cuantas unidades quiere llevar?"));
 let precio = 0
 
 while (producto != "S") {
-    if (producto == "vela 1" || producto == "vela 2" || producto == "vela 3" || producto == "vela 4" || producto == "vela 5" || producto == "vela 6" || producto == "vela 7" || producto == "vela 8" || producto == "vela 9" || producto == "promo 1" || producto == "promo 2" || producto == "promo 3" || producto == "promo 4" || producto == "promo5") {
+    if (producto == "vela 1" || producto == "vela 2" || producto == "vela 3" || producto == "vela 4" || producto == "vela 5" || producto == "vela 6" || producto == "vela 7" || producto == "vela 8" || producto == "vela 9") {
 
         switch (producto) {
             case "vela 1":
@@ -225,21 +165,6 @@ while (producto != "S") {
                 break;
             case "vela 9":
                 precio = 130;
-                break;
-            case "promo 1":
-                precio = 845;
-                break;
-            case "promo 2":
-                precio = 650;
-                break;
-            case "promo 3":
-                precio = 860;
-                break;
-            case "promo 4":
-                precio = 1050;
-                break;
-            case "promo 5":
-                precio = 645;
                 break;
             default:
                 alert("No tenemos ese producto")
@@ -297,44 +222,4 @@ alert("Fecha de la compra: " + hoy.toLocaleString() )
 break;
 }
 
-
-
-
-
-
-
-//ARRAYS
-//Declaramos el primer array
-const aromasVelas = ["Lavanda", "Canela", "Vainilla", "Coco", "Limón", "Jazmín"]
-console.table(aromasVelas);
-
-//Agregamos nuevos elementos al final de la lista
-aromasVelas.push("Menta");
-aromasVelas.push("Chocolate");
-
-//Agregamos nuevos elementos al principio de la lista
-aromasVelas.unshift("Sandía");
-aromasVelas.unshift("Pepino");
-aromasVelas.unshift("Cítricos");
-console.log(aromasVelas);
-
-//Borramos algunos aromas, el 5, 6 y 7
-aromasVelas.splice(5, 3);
-console.log(aromasVelas);
-
-//Pasamos de array a string
-let aString = aromasVelas.join("\n");
-console.log(aString);
-
-//Creamos nuevos arrays
-const tamanoVela = ["Grande", "Mediano", "Chico"];
-const recipienteVela = ["Caramelera", "Vasito simple", "Con formas"];
-const precioVela = ["$700", "$800", "$900", "$920", "$1000", "$1300", "$1400", "$1500"];
-
-//Aquí concatenamos los nuevos arrays
-const tamanoYrecipiente = (("Tamaños: " + tamanoVela + "\n").concat("Recipientes: " + recipienteVela + "\n"));
-const aromaYprecio = (("Aromas: " + aromasVelas + "\n").concat("Precios: " + precioVela));
-const velas = tamanoYrecipiente.concat(aromaYprecio);
-//Mostramos por consola todos los arrays concatenados
-console.log(velas);
 

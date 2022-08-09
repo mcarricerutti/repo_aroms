@@ -5,6 +5,19 @@
 // //Montramos por pantalla un mensaje de bienvenida, más el nombre ingresado
 // alert("¡Bienvenida a -AROMS- " + usuario + "!");
 
+// //Saludo INICIAL
+// //Le pedimos al usuario que ingrese su nombre
+// let usuario = prompt("Ingresa tu nombre");
+
+// function bienvenida() {
+//     //Mostramos por pantalla el saludo
+//     alert("¡Te damos la bienvenida a -AROMS-, " + usuario + "!");
+// }
+// bienvenida()
+
+
+//Mostramos por pantalla el aviso del descuento, y llamamos una variable global
+// let aviso = alert("¡Para suerte tuya " + usuario + ", hoy tenemos 30% de descuento en todos los productos de la tienda!")
 
 
 // //Solicitamos edad del usuario
@@ -410,5 +423,55 @@
 //         alert(presentacion)
 //     }else{
 //         alert("Chauu");
+//     }
+// }
+
+
+
+
+//Con forEach, retornamos los numeros de las velas.
+// Velas.forEach(vela => console.log(vela.numero));
+
+// //Filtramos las velas disponibles
+// const velasDispo=Velas.filter(vela=>vela.disponibilidad == true);
+// console.table(velasDispo);
+
+
+// //Estructura de las velas en promo
+
+// class promo {
+//     constructor(forma, tamano, precio) {
+//         this.forma = forma,
+//             this.tamano = tamano,
+//             this.precio = parseInt(precio)
+//     }
+// }
+
+// //Creamos nuevos objetos
+
+// let promo1 = new promo("Corazón", "Mediano", 845);
+// let promo2 = new promo("Letra", "Chico", 650);
+// let promo3 = new promo("Pirámide", "Mediano", 860);
+// let promo4 = new promo("Flor", "Grande", 1050);
+// let promo5 = new promo("Luna", "Chico", 645);
+
+// //Creamos el array donde guardaremos los datos de las promos.
+// const promos = [];
+
+// //Pusheamos todos los datos.
+// promos.push(promo1, promo2, promo3, promo4, promo5);
+
+
+// //Y por último mediante un for of mostramos las promos del día por pantalla
+// let pregunta = prompt("¿Quieres ver las promos del día? SI o NO." + "\n" + "-Respeta mayúsculas-");
+
+// for (const velas of promos) {
+//     if (pregunta == "SI") {
+//         let presentacion = ("Promos de HOY: " + "\n" + velas.forma + "\n" + velas.tamano + "\n" +"$"+ velas.precio);
+//         alert(presentacion);
+//     } else if (pregunta == "NO") {
+//         alert("¡Gracias por visitar nuestra página " + usuario + "!");
+//         //Usamos un break para que finalice
+//         break;
 //     }
 // }
