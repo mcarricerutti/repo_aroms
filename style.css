@@ -156,6 +156,20 @@ aside {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+.comprar {
+    margin-top: 5%;
+    padding: 1%;
+    border:solid 2px #5e4d32;
+    border-radius: 10px;
+    color: #5e4d32;
+    background-color: #c7bcab;
+    font-size: 20px;
+}
+
+.comprar:hover{
+    background-color: #5e4d32;
+    color: #c7bcab;
+}
 
 /*AROMAS*/
 

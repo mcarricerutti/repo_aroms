@@ -223,3 +223,22 @@ break;
 }
 
 
+//CARDS 
+
+let cartas = document.getElementById("cartas");
+for(const Vela of Velas) {
+    let carta = document.createElement("div");
+    carta.className = "card col-md-4";
+    carta.innerHTML = `
+        <div class="card-body">
+            <h5 class="card-title">${Vela.numero}</h5>
+            <p class="card-text">${Vela.tamano}</p>
+            <p class="card-text">${Vela.precio}</p>
+            <p class="card-text">${Vela.aroma}</p>
+            <p class="card-text">${Vela.recipiente}</p>
+            <button class="btn btn-primary">Comprar
+            </button>
+        </div>
+    `;
+    cartas.append(carta);
+}
