@@ -172,7 +172,7 @@ while (producto != "S") {
         }
     }else{
         alert("No tenemos ese producto")
-        producto = prompt("Agrega un producto a tu carrito (ej: vela 1, promo 4)");
+        producto = prompt("Agrega un producto a tu carrito (ej: vela 1)");
         unidades = parseInt(prompt("¿Cuantas unidades quiere llevar?"))
     }
 
