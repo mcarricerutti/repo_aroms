@@ -13,63 +13,315 @@
     <!--Iconos-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
     <!-- Boostrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"crossorigin="anonymous">
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css">
 
     <link rel="icon" href="img/logo aroms.jpg">
-    
+
     <title>-AROMS- Olores únicos...</title>
 </head>
 
 <body>
     <div class="body">
 
-    <header>
-        <div class="container-fluid">
-            <nav class="navbar cont-nav">
+        <header>
+            <div class="container-fluid">
+                <nav class="navbar cont-nav">
 
-                <div class="container">
-                    <a class="navbar-brand" id="titulo-prin" href="carrito.html">
-                        <h1>AROMS</h1>
-                    </a>
+                    <div class="container">
 
-                    <div class="navbar navbar-expand-lg">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon nav-icono"></span>
+                        <a class="navbar-brand" id="titulo-prin">
+                            <h1>AROMS</h1>
+                        </a>
+
+                        <a id="enlace_car" href="index.html">Volver atrás!</a>
+
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"> 🛒<i class="bi bi-bag-check-fill"></i>
                         </button>
-                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                            <div class="navbar-nav">
-                                <a class="nav-link" id="titu-nav" href="#sobremi">Sobre mí</a>
-                                <a class="nav-link" id="titu-nav" href="#velas">Mis Velas</a>
-                                <a class="nav-link" id="titu-nav" href="#aromas">Aromas</a>
-                                <a class="nav-link" id="titu-nav" href="#tips">Datitos</a>
-                                <a class="nav-link" id="titu-nav" href="#contacto">Contacto</a>
-                            </div>
+
+                    </div>
+
+                </nav>
+            </div>
+        </header>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Carrito</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Aroma</th>
+                                        <th scope="col">Tamaño</th>
+                                        <th scope="col">Cantidad</th>
+                                        <th scope="col">Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="items"></tbody>
+                                <tfoot>
+                                    <tr id="footer">
+                                        <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            <div class="row" id="cards"></div>
                         </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary">Terminar compra</button>
                     </div>
                 </div>
-            </nav>
+            </div>
         </div>
-    </header>
 
 
-    <div class="container">
-        <article id="cartas" class="row">
-            <!-- aqui cartas -->
-        </article>
+        <div class="body_carrito container">
+            <section class="sectionCarrito">
+                <div class="swiper mySwiper container">
+                    <div class="swiper-wrapper content">
+                        <div class="swiper-slide cardCarrito">
+                            <div class="card-content">
+                                <div class="imageCarrito">
+                                    <img src="img/limon.jpg" alt="aroma-limon">
+                                </div>
+
+                                <div class="aromasCarrito">
+                                    <span class="nameAroma">Vela de Limón</span>
+                                    <span class="tamano">6,5cm</span>
+                                    <span class="precioCarrito">$990</span>
+                                </div>
+
+                                <div class="buttonCarrito" id="btn-carrito">
+                                    <button class="comprarCarrito">Agregar</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+
+                        <div class="swiper-slide cardCarrito">
+                            <div class="card-content">
+                                <div class="imageCarrito">
+                                    <img src="img/canela.jpg" alt="">
+                                </div>
+
+                                <div class="aromasCarrito">
+                                    <span class="nameAroma">Vela de Canela</span>
+                                    <span class="tamano">6,5cm</span>
+                                    <span class="precioCarrito">$990</span>
+                                </div>
+
+                                <div class="buttonCarrito" id="btn-carrito">
+                                    <button class="comprarCarrito">Agregar</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="swiper-slide cardCarrito">
+                            <div class="card-content">
+                                <div class="imageCarrito">
+                                    <img src="img/lavanda.jpeg" alt="">
+                                </div>
+
+                                <div class="aromasCarrito">
+                                    <span class="nameAroma">Vela de Lavanda</span>
+                                    <span class="tamano">6,5cm</span>
+                                    <span class="precioCarrito">$990</span>
+                                </div>
+
+                                <div class="buttonCarrito" id="btn-carrito">
+                                    <button class="comprarCarrito">Agregar</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+
+                        <div class="swiper-slide cardCarrito">
+                            <div class="card-content">
+                                <div class="imageCarrito">
+                                    <img src="img/coco.jpg" alt="">
+                                </div>
+
+                                <div class="aromasCarrito">
+                                    <span class="nameAroma">Vela de Coco</span>
+                                    <span class="tamano">6,5cm</span>
+                                    <span class="precioCarrito">$990</span>
+                                </div>
+
+                                <div class="buttonCarrito" id="btn-carrito">
+                                    <button class="comprarCarrito">Agregar</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+
+                        <div class="swiper-slide cardCarrito">
+                            <div class="card-content">
+                                <div class="imageCarrito">
+                                    <img src="img/jazmin.jpg" alt="">
+                                </div>
+
+                                <div class="aromasCarrito">
+                                    <span class="nameAroma">Vela de Jazmín</span>
+                                    <span class="tamano">6,5cm</span>
+                                    <span class="precioCarrito">$990</span>
+                                </div>
+
+                                <div class="buttonCarrito" id="btn-carrito">
+                                    <button class="comprarCarrito">Agregar</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+
+                        <div class="swiper-slide cardCarrito">
+                            <div class="card-content">
+                                <div class="imageCarrito">
+                                    <img src="img/vainilla.jpg" alt="">
+                                </div>
+
+                                <div class="aromasCarrito">
+                                    <span class="nameAroma">Vela de Vainilla</span>
+                                    <span class="tamano">6,5cm</span>
+                                    <span class="precioCarrito">$990</span>
+                                </div>
+
+                                <div class="buttonCarrito" id="btn-carrito">
+                                    <button class="comprarCarrito">Agregar</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+
+                        <div class="swiper-slide cardCarrito">
+                            <div class="card-content">
+                                <div class="imageCarrito">
+                                    <img src="img/corazones.jpg" alt="">
+                                </div>
+
+                                <div class="aromasCarrito">
+                                    <span class="nameAroma">Set Corazones</span>
+                                    <span class="tamano">6,5cm</span>
+                                    <span class="precioCarrito">$990</span>
+                                </div>
+
+                                <div class="buttonCarrito" id="btn-carrito">
+                                    <button class="comprarCarrito">Agregar</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+
+                        <div class="swiper-slide cardCarrito">
+                            <div class="card-content">
+                                <div class="imageCarrito">
+                                    <img src="img/caras.jpg" alt="">
+                                </div>
+
+                                <div class="aromasCarrito">
+                                    <span class="nameAroma">Set Lunas</span>
+                                    <span class="tamano">6,5cm</span>
+                                    <span class="precioCarrito">$990</span>
+                                </div>
+
+                                <div class="buttonCarrito" id="btn-carrito">
+                                    <button class="comprarCarrito">Agregar</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+
+                        <div class="swiper-slide cardCarrito">
+                            <div class="card-content">
+                                <div class="imageCarrito">
+                                    <img src="img/carolas.jpg" alt="">
+                                </div>
+
+                                <div class="aromasCarrito">
+                                    <span class="nameAroma">Set Cubos y Caracolas</span>
+                                    <span class="tamano">6,5cm</span>
+                                    <span class="precioCarrito">$990</span>
+                                </div>
+
+                                <div class="buttonCarrito" id="btn-carrito">
+                                    <button class="comprarCarrito">Agregar</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+        </div>
+
+    
+
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        </section>
     </div>
 
-<!-- Bootstrap-->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            slidesPerGroup: 3,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+
+    </div>
+
+    <!-- Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
     </script>
 
-<!--Java Script-->
+    <!--Java Script-->
     <script src="codigoEntregas.js"></script>
 </body>
 
