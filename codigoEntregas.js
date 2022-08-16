@@ -153,7 +153,7 @@ function presentarCarrito() {
         // Creamos el nodo del item del carrito
         const miNodo = document.createElement('li');
         miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
-        miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].aroma} - ${miItem[0].precio}`;
+        miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].aroma} - $ ${miItem[0].precio}`;
         // Boton de borrar
         const miBoton = document.createElement('button');
         miBoton.classList.add('btn', 'btn-danger', 'mx-5');
@@ -161,12 +161,13 @@ function presentarCarrito() {
         miBoton.style.marginLeft = '1rem';
         miBoton.dataset.item = item;
         miBoton.addEventListener('click', borrarItemCarrito);
+
         // Mezclamos nodos
         miNodo.appendChild(miBoton);
         DOMcarrito.appendChild(miNodo);
     });
     // Renderizamos el precio total en el HTML
-    DOMtotal.textContent = calcularTotal();
+    DOMtotal.textContent = `$` + calcularTotal();
 }
 
 /**
