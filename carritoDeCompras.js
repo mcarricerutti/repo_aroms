@@ -65,9 +65,34 @@ const Productos=[
     },
 ]
 
+//Desestructuracion----
+let {id,aroma,precio} = Productos;
+for(const prod of Productos){
+    console.log(prod.aroma);
+    console.log(prod.id);
+    console.log(prod.precio)
+}
+
+//Desestructurando un array-----
+const [pri,seg,,,quin,,sep,oct,] = Productos
+console.log(pri);
+console.log(seg);
+console.log(quin);
+console.log(sep);
+console.log(oct);
+
+
+
 
 //Declaramos array carrito,para utilizarlo luego
 let Carrito = [];
+
+//Almacenamos productos en el localStorage
+const guardarLocal = (clave, valor) => { localStorage.setItem(clave, valor) };
+//Guardamos el array completo
+guardarLocal("listaProductos", JSON.stringify(Productos));
+
+
 //Llamamos elementos del html(en este caso todos son id)
 const DOMitems = document.querySelector('#items');
 const DOMcarrito = document.querySelector('#carrito');
@@ -109,6 +134,8 @@ function presentarProductos() {
         miNodoBoton.textContent = '+';
         miNodoBoton.setAttribute('marcador', info.id);
         miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
+
+
         // Insertamos todo el codigo creado anteriormente a la etiqueta padre
         miNodoCardBody.appendChild(miNodoImagen);
         miNodoCardBody.appendChild(miNodoTitle);
@@ -117,6 +144,7 @@ function presentarProductos() {
         miNodoCardBody.appendChild(miNodoBoton);
         miNodo.appendChild(miNodoCardBody);
         DOMitems.appendChild(miNodo);
+
     });
 
     /**
@@ -125,6 +153,15 @@ function presentarProductos() {
     function anyadirProductoAlCarrito(evento) {
         // Anyadimos el Nodo a nuestro carrito
         Carrito.push(evento.target.getAttribute('marcador'))
+
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: `Producto añadido al carrito`,
+            showConfirmButton: false,
+            timer: 1500
+          })
+
         // Actualizamos el carrito 
         presentarCarrito();
     }
@@ -156,8 +193,10 @@ function presentarCarrito() {
         miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].aroma} - $ ${miItem[0].precio}`;
         // Boton de borrar
         const miBoton = document.createElement('button');
-        miBoton.classList.add('btn', 'btn-danger', 'mx-5');
-        miBoton.textContent = 'X';
+        miBoton.classList.add(`btn`, `btn-danger`, 'mx-5');
+        miBoton.textContent = '🗑';
+        miBoton.style.backgroundColor= `#E82216`;
+        miBoton.style.border=`#E82216`
         miBoton.style.marginLeft = '1rem';
         miBoton.dataset.item = item;
         miBoton.addEventListener('click', borrarItemCarrito);
@@ -170,6 +209,7 @@ function presentarCarrito() {
     DOMtotal.textContent = `$` + calcularTotal();
 }
 
+
 /**
  * Evento para borrar un elemento del carrito
  */
@@ -180,9 +220,28 @@ function borrarItemCarrito(evento) {
     Carrito = Carrito.filter((carritoId) => {
         return carritoId !== id;
     });
+
+    Swal.fire({
+        text: 'Deseas eliminar el producto?',
+        icon: 'warning',
+        showCancelButton: false,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Eliminado!',
+            'Su producto ha sido eliminado.',
+            'success'
+          )
+        }
+      })
+
     // volvemos a renderizar
     presentarCarrito();
 }
+
 
 /**
  * Calcula el precio total teniendo en cuenta los productos repetidos
@@ -200,6 +259,22 @@ function calcularTotal() {
 }
 
 
+//Interacción del boton finalizar compra.
+let miBotonF=document.getElementById("boton-Fin");
+
+miBotonF.addEventListener("click", ejecutar);
+
+function ejecutar(){
+    Swal.fire({
+        text:`Desea finalizar si compra?`,
+        confirmButtonText: `Si`,
+        showCancelButton: `No,quiero seguir comprando`
+    }).then(() => {
+        calcularTotal()>5000 ? Swal.fire({text:"En su compra tendrá un descuento"}): Swal.fire({text:"No tendrá descuento",})//Aplicando operador ternario
+      })
+}
+
+
 /**
  * Vacía el carrito y vuelve a dibujarlo
  */
@@ -209,29 +284,10 @@ function vaciarCarrito() {
     // Renderizamos los cambios
     presentarCarrito();
 }
-
 // Eventos
 DOMbotonVaciar.addEventListener('click', vaciarCarrito);
+
 
 // Inicio
 presentarProductos();
 presentarCarrito();
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const tamanos = ['6,5cm', '8cm', '10cm'];
-// let select = document.createElement("select");
-// for (let index = 0; index < tamanos.length; index++) {
-//     select.innerHTML +=  `<option value='${index}'>${tamanos[index]}</option>`;
-// }
-// document.body.tamano.appendChild(select);

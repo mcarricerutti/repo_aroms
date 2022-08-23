@@ -5,10 +5,9 @@
     box-sizing: border-box;
 }
 
-.container{
+/* .container{
     overflow: hidden;
-
-}
+} */
 
 .body {
     background-color: #c7bcab;
@@ -99,8 +98,6 @@ aside {
     border-top: solid 2px rgb(104, 121, 115);
     border-bottom: solid 2px rgb(104, 121, 115);
     margin-top: 5%;
-    margin-bottom: 15%;
-    padding-bottom: 2%;
     background-image: url(img/fondo\ velas.jpg);
 }
 
@@ -117,59 +114,103 @@ aside {
     color: rgb(116, 101, 101);
 }
 
-.cont-img-velas {
+.contCarru{
+    height: 60vh;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
 
-.velas {
-    width: 200px;
-    clip-path: circle(50% at 50% 50%);
+.carru{
+    position: relative;
+    height: 450px;
+    width: 1075px;
+    display: flex;
+    align-items: center;
 }
 
-/*PRECIOS*/
-
-.precios {
-    border: none;
-    color: white;
-    margin: 10px 15PX;
-    border-radius: 50px;
+.swiper{
+    width: 940px;
 }
 
-.cont-precios {
-    background-color: rgba(166, 195, 199, 0.6);
+div .cardCarru .imageCarru{
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    padding: 3px;
+    background: rgba(38, 22, 80, 0.76);
+}
+div .cardCarru .imageCarru img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+.cardCarru{
+    border-radius: 20px;
+    background: #fff;
+    margin: 20px 0;
+    width: 280px;
 }
 
-.titu-precios {
-    margin-top: 30%;
-    font-size: 40px;
-    text-decoration: underline;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.cardCarru::before{
+    content: "";
+    position: absolute;
+    height: 55%;
+    width: 100%;
+    background: rgba(100, 101, 145, 0.836);
+    border-radius: 20px 20px 0 0;
 }
 
-.precios h6 {
-    font-size: 1.2em;
-    margin-top: 2px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.cardCarru .contentCarru {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    position: relative;
+    z-index: 100;
 }
 
-.precios p {
-    font-size: 1em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.cardCarru .aromasCarru {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    color:#333;
+}
+
+
+.aromasCarru .nameAroma{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.swiper-button-next, .swiper-button-prev{
+    opacity: 0.7;
+    color: rgba(89, 98, 126, 0.89);
+    transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover{
+    opacity: 1;
+    color: rgba(89, 98, 126, 0.89);
 }
 
 .comprar {
-    margin-top: 5%;
     padding: 1%;
-    border:solid 2px #5e4d32;
+    border: none;
     border-radius: 10px;
-    color: #5e4d32;
-    background-color: #c7bcab;
+    color: #f0f0f7;
+    background-color: #3c4568be;
     font-size: 20px;
+    margin-left: 45%;
+    margin-bottom: 5%;
 }
 
 .comprar:hover{
-    background-color: #5e4d32;
-    color: #c7bcab;
+    background-color: #f8f8fa;
+    color: #3c4568be;
 }
 
 /*AROMAS*/
