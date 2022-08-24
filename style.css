@@ -380,9 +380,45 @@ footer {
 
 
 /*Carrito*/
+#items{
+    margin-left: 2%;
+}
+
+.contenedorCarrito{
+    margin-top: 5%;
+    margin-left: 3%;
+    padding: 2%;
+    background-color: white;
+}
+
+.tituCarrito{
+    color: #778c9e;
+    margin-left: 25%;
+}
+
 #enlace_car {
     color: white;
     margin-left: 65%;
+}
+
+#boton-vaciar {
+    background-color: #90aac0;
+    border: none;
+    color: white;
+}
+
+#boton-vaciar:hover{
+    background-color: #778c9e;
+}
+
+#boton-Fin{
+    background-color: #90aac0;
+    border: none;
+    color: white;
+}
+
+#boton-Fin:hover{
+    background-color: #778c9e;
 }
 
 

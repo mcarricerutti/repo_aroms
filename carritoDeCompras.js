@@ -6,6 +6,7 @@ const Productos=[
         tamano:`10cm`,
         precio: 1000,
         imagen: `img/limon.jpg`,
+        stockMax: 10,
     },
     {
         id:2,
@@ -13,6 +14,7 @@ const Productos=[
         tamano:`12cm`,
         precio: 1200,
         imagen: `img/lavanda.jpeg`,
+        stockMax: 10,
     },
     {
         id:3,
@@ -20,6 +22,7 @@ const Productos=[
         tamano:`12cm`,
         precio: 1200,
         imagen: `img/vainilla.jpg`,
+        stockMax: 10,
     },
     {
         id:4,
@@ -27,6 +30,7 @@ const Productos=[
         tamano:`10cm`,
         precio: 1000,
         imagen: `img/canela.jpg`,
+        stockMax: 10,
     },
     {
         id:5,
@@ -34,6 +38,7 @@ const Productos=[
         tamano:`12cm`,
         precio: 1200,
         imagen: `img/jazmin.jpg`,
+        stockMax: 10,
     },
     {
         id:6,
@@ -41,6 +46,7 @@ const Productos=[
         tamano:`12cm`,
         precio: 1200,
         imagen: `img/coco.jpg`,
+        stockMax: 10,
     },
     {
         id:7,
@@ -48,6 +54,7 @@ const Productos=[
         tamano:`8cm`,
         precio: 1500,
         imagen: `img/corazones.jpg`,
+        stockMax: 10,
     },
     {
         id:8,
@@ -55,6 +62,7 @@ const Productos=[
         tamano:`8cm`,
         precio: 1800,
         imagen: `img/carolas.jpg`,
+        stockMax: 10,
     },
     {
         id:9,
@@ -62,6 +70,7 @@ const Productos=[
         tamano:`8cm`,
         precio: 1650,
         imagen: `img/caras.jpg`,
+        stockMax: 10,
     },
 ]
 
@@ -114,6 +123,10 @@ function presentarProductos() {
         // Titulo
         const miNodoTitle = document.createElement('h5');
         miNodoTitle.classList.add('card-title');
+        miNodoTitle.style.color= `#7C86C5`;
+        miNodoTitle.style.fontSize=`22px`;
+        miNodoTitle.style.padding= `5%`;
+        miNodoTitle.style.fontWeight= `bold`;
         miNodoTitle.textContent = info.aroma;
         // Imagen
         const miNodoImagen = document.createElement('img');
@@ -122,18 +135,32 @@ function presentarProductos() {
         // Precio
         const miNodoPrecio = document.createElement('p');
         miNodoPrecio.classList.add('card-text');
+        miNodoPrecio.style.color=`#7A7D8F `;
+        miNodoPrecio.style.backgroundColor=`#D3D7EC`;
+        miNodoPrecio.style.marginLeft=`10%`;
+        miNodoPrecio.style.marginRight=`20%`;
         miNodoPrecio.textContent = `$ ${info.precio}`;
         //Tamano
         const miNodoTamano = document.createElement(`tamano`);
         miNodoTamano.classList.add(`card-text`);
+        miNodoTamano.style.fontSize= `18px`;
         miNodoTamano.textContent = `${info.tamano}`;
         // Boton 
         const miNodoBoton = document.createElement('button');
-        miNodoBoton.style.marginLeft=`10%`
-        miNodoBoton.classList.add('btn', 'btn-primary');
+        miNodoBoton.style.marginLeft=`10%`;
+        miNodoBoton.style.backgroundColor=`#A7ADD1`;
+        miNodoBoton.style.border=`none`;
+        miNodoBoton.classList.add('btn');
         miNodoBoton.textContent = '+';
         miNodoBoton.setAttribute('marcador', info.id);
         miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
+        //Disponibilidad
+        const miNodoDispo = document.createElement(`disponible`);
+        miNodoDispo.classList.add(`card-text`);
+        miNodoDispo.style.fontSize= `15px`;
+        miNodoDispo.style.display= `flex`;
+        miNodoDispo.style.paddingTop=`4%`;
+        miNodoDispo.textContent= `\n Compra máx. ${info.stockMax}u`;
 
 
         // Insertamos todo el codigo creado anteriormente a la etiqueta padre
@@ -142,6 +169,7 @@ function presentarProductos() {
         miNodoCardBody.appendChild(miNodoPrecio);
         miNodoCardBody.appendChild(miNodoTamano);
         miNodoCardBody.appendChild(miNodoBoton);
+        miNodoCardBody.appendChild(miNodoDispo);
         miNodo.appendChild(miNodoCardBody);
         DOMitems.appendChild(miNodo);
 
@@ -193,9 +221,9 @@ function presentarCarrito() {
         miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].aroma} - $ ${miItem[0].precio}`;
         // Boton de borrar
         const miBoton = document.createElement('button');
-        miBoton.classList.add(`btn`, `btn-danger`, 'mx-5');
+        miBoton.classList.add(`btn`, 'mx-5');
         miBoton.textContent = '🗑';
-        miBoton.style.backgroundColor= `#E82216`;
+        miBoton.style.backgroundColor= `#B7757B `;
         miBoton.style.border=`#E82216`
         miBoton.style.marginLeft = '1rem';
         miBoton.dataset.item = item;
