@@ -382,6 +382,7 @@ footer {
 /*Carrito*/
 #items{
     margin-left: 2%;
+    margin-right: 2%;
 }
 
 .contenedorCarrito{
@@ -398,7 +399,7 @@ footer {
 
 #enlace_car {
     color: white;
-    margin-left: 65%;
+    margin-left: 75%;
 }
 
 #boton-vaciar {
@@ -419,6 +420,11 @@ footer {
 
 #boton-Fin:hover{
     background-color: #778c9e;
+}
+
+.iconCarrito{
+    background-color: #90aac0;
+    border: none;
 }
 
 

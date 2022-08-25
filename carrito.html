@@ -12,6 +12,7 @@
 
     <!--Iconos-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
@@ -40,7 +41,13 @@
                             <h1>AROMS</h1>
                         </a>
 
-                        <a id="enlace_car" href="index.html">Volver atrás!</a>
+                        <a id="enlace_car" href="index.html"><<</a>
+                        
+                        <!-- Button trigger modal -->
+                        <button id="toggleMyModal" type="button" class="btn iconCarrito" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">🛒<i class="bi bi-bag-check-fill"></i>
+                        </button>
+
 
                     </div>
 
@@ -49,26 +56,38 @@
         </header>
 
 
-        <div class="container">
-            <div class="row">
-                <!--Carrito-->
-                <aside class="col-sm-12 col-md-8 col-lg-6 contenedorCarrito">
-                    <h2 class="tituCarrito">Mi Carrito</h2>
-                    <!--Elementos del carrito -->
-                    <ul id="carrito" class="list-group"></ul>
-                    <hr>
-                    <!-- Precio total -->
-                    <p class="text-right">Total: <span id="total"></span></p>
-                    <button id="boton-vaciar" class="btn">Vaciar</button>
-                    <button id="boton-Fin" class="btn">Terminar compra</button>
-                </aside>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title tituCarrito" id="exampleModalLabel">Mi Carrito</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <!--Carrito-->
+                                <aside class="contenedorCarrito">
+                                    <!--Elementos del carrito -->
+                                    <ul id="carrito" class="list-group"></ul>
+                                    <hr>
+                                    <!-- Precio total -->
+                                    <p class="text-right">Total: <span id="total"></span></p>
+                                    <button id="boton-vaciar" class="btn">Vaciar</button>
+                                    <button id="boton-Fin" class="btn">Terminar compra</button>
+                                </aside>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="container">
-            <div class="row">
+            <div >
                 <!-- Elementos generados a partir del JSON -->
-                <main id="items" class="col-sm-4 col-md-10 col-lg-10 row"></main>
+                <main id="items" class="row"></main>
             </div>
         </div>
       
@@ -82,11 +101,11 @@
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
     </script>
 
-    <!--Java Script-->
-    <script src="carritoDeCompras.js"></script>
-
     <!--Libreria sweetalert2-->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!--Java Script-->
+    <script src="carritoDeCompras.js"></script>
 
 </body>
 
