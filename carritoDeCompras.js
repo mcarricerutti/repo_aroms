@@ -1,3 +1,18 @@
+function nombreUsuario(){
+    Swal.fire({
+        position: 'center',
+        text: `Ingresa tu nombre`,
+        input: `text`,
+        inputPlaceHolder:`Escribe aquí...`,
+        confirmButtonColor:`pink`,
+        confirmButtonText:`Listo`
+    })
+}
+nombreUsuario();
+
+
+
+
 //Creamos un array para declarar todos los prodcutos.
 const Productos=[
     {
@@ -154,6 +169,7 @@ function presentarProductos() {
         miNodoBoton.textContent = '+';
         miNodoBoton.setAttribute('marcador', info.id);
         miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
+
         //Disponibilidad
         const miNodoDispo = document.createElement(`disponible`);
         miNodoDispo.classList.add(`card-text`);
@@ -182,13 +198,15 @@ function presentarProductos() {
         // Anyadimos el Nodo a nuestro carrito
         Carrito.push(evento.target.getAttribute('marcador'))
 
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: `Producto añadido al carrito`,
-            showConfirmButton: false,
-            timer: 1500
-          })
+        Toastify({
+            text: "Producto seleccionado añadido!",
+            duration: 3000,
+            gravity: "bottom",
+            position: "right",
+            style: {
+                background: "pink",
+            }
+        }).showToast();
 
         // Actualizamos el carrito 
         presentarCarrito();
@@ -215,6 +233,8 @@ function presentarCarrito() {
             // ¿Coincide las id? Incremento el contador, en caso contrario lo mantengo
             return itemId === item ? total += 1 : total;
         }, 0);
+
+        
         // Creamos el nodo del item del carrito
         const miNodo = document.createElement('li');
         miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
@@ -294,12 +314,16 @@ miBotonF.addEventListener("click", ejecutar);
 
 function ejecutar(){
     Swal.fire({
-        text:`Desea finalizar si compra?`,
-        confirmButtonText: `Si`,
-        showCancelButton: `No,quiero seguir comprando`
-    }).then(() => {
-        calcularTotal()>5000 ? Swal.fire({text:"En su compra tendrá un descuento"}): Swal.fire({text:"No tendrá descuento",})//Aplicando operador ternario
-      })
+        title:`Compra realizada con éxito!`,
+        color: `white`,
+        background: `#778c9e`,
+        confirmButtonColor:`white`,
+        confirmButtonText: `✓`,
+        icon: 'success',
+    })
+    // }).then(() => {
+    //     calcularTotal()>5000 ? Swal.fire({text:"En su compra tendrá un descuento"}): Swal.fire({text:"No tendrá descuento",})//Aplicando operador ternario
+    //   })
 }
 
 

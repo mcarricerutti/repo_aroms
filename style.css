@@ -20,6 +20,15 @@
 
 /*INICIO*/
 
+.menuFijo{
+    background-color: #ffffff;
+}
+
+.menu-fixed {
+	position:fixed;
+    z-index: 1000;
+}
+
 #titulo-prin {
     font-size: 50px;
     color: #445666;
@@ -29,7 +38,7 @@
 }
 
 #titu-nav {
-    color: white;
+    color: #64798b;
     padding-top: 8%;
     font-family: 'Recursiva', sans-serif;
 }
@@ -40,6 +49,7 @@ aside {
 
 .img-inicio {
     width: 100%;
+    margin-top: 11%;
     clip-path: polygon(51% 100%, 100% 80%, 100% 0, 0 0, 0 80%);
 }
 
@@ -84,9 +94,10 @@ aside {
 .img-presentacion {
     width: 250px;
     height: 250px;
-    margin-left: 50%;
-    margin-right: 50%;
+    margin-left: 100%;
+    margin-right: 30%;
     margin-top: 5%;
+    margin-bottom: 2%;
     clip-path: circle(50% at 50% 50%);
 }
 
@@ -197,15 +208,19 @@ div .cardCarru .imageCarru img{
     color: rgba(89, 98, 126, 0.89);
 }
 
+.contBtnComprar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .comprar {
-    padding: 1%;
+    padding: 15%;
     border: none;
     border-radius: 10px;
     color: #f0f0f7;
     background-color: #3c4568be;
     font-size: 20px;
-    margin-left: 45%;
-    margin-bottom: 5%;
 }
 
 .comprar:hover{
@@ -214,10 +229,16 @@ div .cardCarru .imageCarru img{
 }
 
 /*AROMAS*/
+.filaAroms{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .cont-aromas {
     margin-top: 10%;
     margin-bottom: 10%;
+    padding: 4%;
     background-image: url(img/lavandas.jpg);
     border: solid 5px #90aac0;
 }
@@ -226,7 +247,7 @@ div .cardCarru .imageCarru img{
     padding-top: 2%;
     padding-bottom: 3%;
     text-align: end;
-    margin-right: 20%;
+    margin-right: 15%;
     font-family: 'Recursiva', sans-serif;
     font-size: 30px;
     color: #64798b;
@@ -244,7 +265,8 @@ div .cardCarru .imageCarru img{
     font-size: 18px;
     margin-top: 2%;
     margin-bottom: 2%;
-    margin-left: 5%;
+    margin-left: 4%;
+    margin-right: 4%;
     text-align: center;
     border: solid 3px #90aac0;
     border-radius: 10px;
@@ -314,6 +336,7 @@ footer {
 
 .titu-foot {
     margin-bottom: 4%;
+    margin-top: 4%;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -334,6 +357,7 @@ footer {
     background-color: #000000;
     border: solid 3px #000000;
     color: white;
+    margin-bottom: 2%;
 }
 
 .btn:hover {
@@ -346,6 +370,7 @@ footer {
     display: flex;
     justify-content: center;
     margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .redes .btn {
@@ -385,11 +410,8 @@ footer {
     margin-right: 2%;
 }
 
-.contenedorCarrito{
-    margin-top: 5%;
-    margin-left: 3%;
-    padding: 2%;
-    background-color: white;
+.contProduCarr{
+    padding-top: 8%;
 }
 
 .tituCarrito{
@@ -398,7 +420,7 @@ footer {
 }
 
 #enlace_car {
-    color: white;
+    color:#90aac0;
     margin-left: 75%;
 }
 
@@ -425,10 +447,8 @@ footer {
 .iconCarrito{
     background-color: #90aac0;
     border: none;
+    margin-top: 2%;
 }
-
-
-
 
 
 
