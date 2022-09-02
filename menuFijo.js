@@ -8,5 +8,4 @@ $(document).ready(function(){
 			$('.menuFijo').removeClass('menu-fixed');
 		}
 	});
-
 });
