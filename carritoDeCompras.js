@@ -1,3 +1,20 @@
+let ingreso=(
+    Swal.fire({
+        position: 'center',
+        text: `Ingresa tu nombre`,
+        input: `text`,
+        inputPlaceHolder: `Escribe aquí...`,
+        confirmButtonColor: `pink`,
+        confirmButtonText: `Listo`
+})
+)
+
+for(let i=0;i==1;i++){
+    ingreso;
+}
+
+localStorage.setItem("usuario",ingreso);
+
 //Declaramos array carrito,para utilizarlo luego
 let Carrito = [];
 
