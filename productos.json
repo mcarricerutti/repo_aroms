@@ -1,0 +1,73 @@
+[{
+        "id": 1,
+        "aroma": "Vela de Limón",
+        "tamano": "10cm",
+        "precio": 1000,
+        "imagen": "img/limon.jpg",
+        "stockMax": 10
+    },
+    {
+        "id": 2,
+        "aroma": "Vela de Lavanda",
+        "tamano": "12cm",
+        "precio": 1200,
+        "imagen": "img/lavanda.jpeg",
+        "stockMax": 10
+    },
+    {
+        "id": 3,
+        "aroma": "Vela de Vainilla",
+        "tamano": "12cm",
+        "precio": 1200,
+        "imagen": "img/vainilla.jpg",
+        "stockMax": 10
+    },
+    {
+        "id": 4,
+        "aroma": "Vela de Canela",
+        "tamano": "10cm",
+        "precio": 1000,
+        "imagen": "img/canela.jpg",
+        "stockMax": 10
+    },
+    {
+        "id": 5,
+        "aroma": "Vela de Jazmín",
+        "tamano": "12cm",
+        "precio": 1200,
+        "imagen": "img/jazmin.jpg",
+        "stockMax": 10
+    },
+    {
+        "id": 6,
+        "aroma": "Vela de Coco",
+        "tamano": "12cm",
+        "precio": 1200,
+        "imagen": "img/coco.jpg",
+        "stockMax": 10
+    },
+    {
+        "id": 7,
+        "aroma": "Set Corazones",
+        "tamano": "8cm",
+        "precio": 1500,
+        "imagen": "img/corazones.jpg",
+        "stockMax": 10
+    },
+    {
+        "id": 8,
+        "aroma": "Set Cubos y Caracolas",
+        "tamano": "8cm",
+        "precio": 1800,
+        "imagen": "img/carolas.jpg",
+        "stockMax": 10
+    },
+    {
+        "id": 9,
+        "aroma": "Set Lunas",
+        "tamano": "8cm",
+        "precio": 1650,
+        "imagen": "img/caras.jpg",
+        "stockMax": 10
+    }
+]
