@@ -13,8 +13,6 @@
     <!--Iconos-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script> -->
-
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
@@ -45,11 +43,9 @@
                             <h1>AROMS</h1>
                         </a>
 
-                        <a id="enlace_car" href="index.html"><<</a>
-                        
+                        <a id="enlace_car" href="paginaPrin.html"> << </a> 
                         <!-- Button trigger modal -->
-                        <button id="toggleMyModal" type="button" class="btn iconCarrito" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">🛒<i class="bi bi-bag-check-fill"></i>
+                        <button id="toggleMyModal" type="button" class="btn iconCarrito" data-bs-toggle="modal"data-bs-target="#exampleModal">🛒<i class="bi bi-bag-check-fill"></i>
                         </button>
 
 
@@ -88,14 +84,26 @@
             </div>
         </div>
 
-    
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <select id="miSeleccion" class="form-select" aria-label="Default select example">
+                        <option value="pordefecto">ORDENAR</option>
+                        <option value="menor">Por menor precio</option>
+                        <option value="mayor">Por mayor precio</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
         <div class="container contProduCarr">
             <!-- Elementos generados a partir del JSON -->
             <main id="items" class="row"></main>
         </div>
-      
 
-    
+
+
 
     </div>
 

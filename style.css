@@ -62,6 +62,10 @@ aside {
     font-family: 'Recursiva', sans-serif;
 }
 
+#miSeleccion{
+    margin-top: 70%;
+}
+
 
 /*SOBRE MI*/
 
@@ -411,7 +415,7 @@ footer {
 }
 
 .contProduCarr{
-    padding-top: 8%;
+    padding-top: 2%;
 }
 
 .tituCarrito{
@@ -450,5 +454,68 @@ footer {
     margin-top: 2%;
 }
 
+/*Formulario*/
+.contBienveFormu{
+    background-color: #516b83a9;
+    margin-top: 18%;
+    padding: 5%;
+}
 
+.contTitu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 1%;
+    font-size: 28px;
+    text-decoration: underline;
+}
 
+.contBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnCompletarFormu{
+    background-color:white;
+    border: solid 1px white;
+    color: #516b83a9;
+}
+
+.btnCompletarFormu:hover{
+    background-color: #516b83a9;
+    border: solid 1px #516b83a9;
+    color: white;
+}
+
+.bodyFormu{
+    background-image: url(img/lavandas.jpg);
+}
+
+.tituModalFormu{
+    color: #516b83a9;
+    font-size: 20px;
+    margin-left: 10%;
+}
+
+.btnRegistrar{
+    background-color: #516b83a9;
+    border: none;
+}
+
+.btnRegistrar:hover{
+    background-color: #516b83;
+    border: none;
+    font-size: 18px;
+}
+
+.enlaceFormu{
+    color: white;
+    text-decoration: underline;
+}
+
+.enlaceFormu:hover{
+    color: white;
+    text-decoration: underline;
+}

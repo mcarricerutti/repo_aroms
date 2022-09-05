@@ -1,28 +1,3 @@
-// let ingreso=(
-//     Swal.fire({
-//         position: 'center',
-//         text: `Ingresa tu nombre`,
-//         input: `text`,
-//         inputPlaceHolder: `Escribe aquí...`,
-//         confirmButtonColor: `pink`,
-//         confirmButtonText: `Listo`
-// })
-// )
-
-// for(let i=0;i==1;i++){
-//     ingreso;
-// }
-
-
-// //Almacenamos productos en el localStorage
-// const guardarUsuario = (clave, valor) => {
-// localStorage.setItem(clave, valor)
-// };
-// //Guardamos el array completo
-// guardarUsuario("Usuarios",ingreso);
-
-
-
 //Creamos una variable global para almacenas los datos de productos.json
 let productosJSON = [];
 
@@ -46,6 +21,8 @@ obtenerJSON();
 //Declaramos array carrito,para utilizarlo luego
 let Carrito =[];
 
+let lista
+
 
 
 //Llamamos elementos del html(en este caso todos son id)
@@ -53,6 +30,15 @@ const DOMitems = document.querySelector('#items');
 const DOMcarrito = document.querySelector('#carrito');
 const DOMtotal = document.querySelector('#total');
 const DOMbotonVaciar = document.querySelector('#boton-vaciar');
+
+
+//Evento-Cuando la ventana está cargada
+window.onload=()=>{
+    lista=document.getElementById("items");
+    //selector y evento change
+    document.getElementById("miSeleccion").setAttribute("option", "pordefecto");
+    document.getElementById("miSeleccion").onchange=()=>ordenar();
+};
 
 
 //Funciones
@@ -270,6 +256,23 @@ presentarCarrito();
 }
 // Eventos
 DOMbotonVaciar.addEventListener('click', vaciarCarrito);
+
+function ordenar() {
+    let seleccion = document.getElementById("miSeleccion").value;
+    console.log(seleccion)
+    if (seleccion == "menor") {
+        productosJSON.sort(function(a, b) {
+            return a.precio - b.precio
+        });
+    } else if (seleccion == "mayor") {
+        productosJSON.sort(function(a, b) {
+            return b.precio - a.precio
+        });
+    }
+    lista.innerHTML="";
+    presentarProductos();
+}
+
 
 
 // Inicio
