@@ -6,9 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- TOASTIFY -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+
     <!-- Boostrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css">
 
@@ -26,8 +29,11 @@
         </div>
         <div class="contBtn">
             <!-- Button trigger modal -->
-            <button id="toggleMyModal" type="button" class="btn btnCompletarFormu" data-bs-toggle="modal"
+            <button id="toggleMyModal" type="button" class="btn btnCompletarFor" data-bs-toggle="modal"
             data-bs-target="#exampleModal">Completar formulario!</button>
+        </div>
+        <div class="contBtn">
+            <button type="button" class="btn enlaceFormu"><a class="texEnlaceForm" href="paginaPrin.html">Ver -AROMS-</a></button>
         </div>
     </div>
 
@@ -42,17 +48,17 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form id="formularioPrin">
                         <div class="mb-3">
                           <label for="exampleInputText" class="form-label">Nombre</label>
-                          <input type="text" class="form-control inputNombre">
+                          <input type="text" id="nombre" class="form-control inputNombre">
                         </div>
                         <div class="mb-3">
                           <label for="exampleInputNumber" class="form-label">Edad</label>
-                          <input type="number" class="form-control inputEdad">
+                          <input type="number" id="edad" class="form-control inputEdad">
                         </div>
-                        <button type="submit" class="btn btnRegistrar"><a class="enlaceFormu" href="paginaPrin.html">Registrarme</a></button>
-                      </form>
+                        <input type="submit" value="Registrarme" class="btn btnRegistrar">
+                    </form>
                 </div>
             </div>
         </div>
@@ -63,6 +69,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
     </script>
+
+    <!-- TOASTIFY -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
     <!--Java Script-->
     <script src="registroFormu.js"></script>

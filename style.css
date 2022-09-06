@@ -477,13 +477,13 @@ footer {
     justify-content: center;
 }
 
-.btnCompletarFormu{
+.btnCompletarFor{
     background-color:white;
     border: solid 1px white;
     color: #516b83a9;
 }
 
-.btnCompletarFormu:hover{
+.btnCompletarFor:hover{
     background-color: #516b83a9;
     border: solid 1px #516b83a9;
     color: white;
@@ -502,6 +502,7 @@ footer {
 .btnRegistrar{
     background-color: #516b83a9;
     border: none;
+    text-decoration: underline;
 }
 
 .btnRegistrar:hover{
@@ -511,11 +512,25 @@ footer {
 }
 
 .enlaceFormu{
+    background-color: white;
+    border: none;
+}
+
+.enlaceFormu:hover{
+    background-color: #516b83;
+    border: none;
+} 
+
+.texEnlaceForm{
+    color: #516b83a9;
+    text-decoration: underline;
+}
+
+.texEnlaceForm:hover{
     color: white;
     text-decoration: underline;
 }
 
-.enlaceFormu:hover{
-    color: white;
-    text-decoration: underline;
+.modal{
+    margin-top: 7%;
 }
