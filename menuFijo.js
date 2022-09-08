@@ -1,4 +1,4 @@
-$(document).ready(function(){
+{document.ready}(function(){
 	let altura = $('.menuFijo').offset().top;
 	
 	$(window).on('scroll', function(){

@@ -6,10 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Decile hola a nuevos aromas, frescura pura,y bienestar.">
-    <meta name="keywords"
-        content="VELAS, VALES DE SOJA, AROMAS, OLORES, NATURALES, VAINILLA, COCO, LAVANDA, FRESCO, FRESCURA, PURA, PURO, PAZ, FELICIDAD">
-
     <!--Iconos-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -31,78 +27,57 @@
 </head>
 
 <body>
-    <div class="body">
+    <div class="bodyFormuCompra">
 
         <header>
             <div class="container-fluid menuFijo menu-fixed">
                 <nav class="navbar">
-
                     <div class="container">
 
-                        <a class="navbar-brand" id="titulo-prin">
+                        <a class="navbar-brand" id="titulo-prin" href="paginaPrin.html">
                             <h1>AROMS</h1>
                         </a>
 
-                        <a id="enlace_car" href="paginaPrin.html"> << </a> 
-                        <!-- Button trigger modal -->
-                        <button id="toggleMyModal" type="button" class="btn iconCarrito" data-bs-toggle="modal"data-bs-target="#exampleModal">🛒<i class="bi bi-bag-check-fill"></i>
-                        </button>
-
-
                     </div>
-
                 </nav>
             </div>
         </header>
 
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title numPasoCompra" id="exampleModalLabel">1</h5>
-                        <h3 class="modal-title tituPasoCompra" id="exampleModalLabel">Mi Carrito</h3>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container">
-                            <div class="row">
-                                <!--Carrito-->
-                                <aside class="contenedorCarrito">
-                                    <!--Elementos del carrito -->
-                                    <ul id="carrito" class="list-group"></ul>
-                                    <hr>
-                                    <!-- Precio total -->
-                                    <p class="total text-right">Total: <span></span></p>
-                                    <button id="boton-vaciar" class="btn">Vaciar</button>
-                                    <button id="boton-Fin" class="btn"><a class="enlaceBotonFin" href="formularioDatosCompra.html">Ir a pagar > </a></button>
-                                </aside>
+        <section>
+            <div class="container contPago">
+                <h5 class="modal-title numPasoCompra" id="exampleModalLabel">3</h5>
+                <h4 for="exapleTituForm" class="form-label"> MÉTODO DE PAGO </h4>
+                <div class="row">
+                    <div class="col-lg-8 contFormuPago">
+                        <form class="formPago">
+                            <div class="mb-3" id="cuotas">
+                                <!-- <select class="form-select"  aria-label="Default select example">
+                                    <option value="1"></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                </select> -->
                             </div>
-                        </div>
+                            <div class="mb-3">
+                                <input type="number" id="numeroTarj" placeholder="Número: *" *" class="form-control inputNombre">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" id="titularTarj" placeholder="Titular de la tarjeta *" class="form-control inputEdad">
+                            </div>
+                            <div class="mb-3">
+                                <input type="number" id="vencimientoTarj" placeholder="MM/VV *" class="form-control inputEdad">
+                                <div class="form-text">Fecha de caducidad de la tarjeta</div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="number" id="codSeguridadTarj" placeholder="CVV *" class="form-control inputEdad">
+                            </div>
+
+                            <button type="submit" class="btnFinPago" id="finCompra">FINALIZAR COMPRA -></button>
+
+                        </form>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2">
-                    <select id="miSeleccion" class="form-select" aria-label="Default select example">
-                        <option value="pordefecto">ORDENAR</option>
-                        <option value="menor">Por menor precio</option>
-                        <option value="mayor">Por mayor precio</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="container contProduCarr">
-            <!-- Elementos generados a partir del JSON -->
-            <main id="items" class="row"></main>
-        </div>
-
+        </section>
 
 
         <footer>
@@ -164,8 +139,6 @@
         </footer>
 
 
-
-
     </div>
 
     <!-- Bootstrap-->
@@ -180,9 +153,8 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
     <!--Java Script-->
-    <script src="carritoDeCompras.js"></script>
+    <script src="formuPago.js"></script>
     <script src="menuFijo.js"></script>
-
 </body>
 
 </html>

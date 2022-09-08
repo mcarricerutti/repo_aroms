@@ -5,9 +5,91 @@
     box-sizing: border-box;
 }
 
-/* .container{
-    overflow: hidden;
-} */
+
+/*Formulario Bienvenida*/
+.contBienveFormu{
+    background-color: #516b83a9;
+    margin-top: 18%;
+    padding: 5%;
+}
+
+.contTitu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 1%;
+    font-size: 28px;
+    text-decoration: underline;
+}
+
+.contBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnCompletarFor{
+    background-color:white;
+    border: solid 1px white;
+    color: #516b83a9;
+}
+
+.btnCompletarFor:hover{
+    background-color: #516b83a9;
+    border: solid 1px #516b83a9;
+    color: white;
+}
+
+.bodyFormu{
+    background-image: url(img/lavandas.jpg);
+}
+
+.tituModalFormu{
+    color: #516b83a9;
+    font-size: 20px;
+    margin-left: 10%;
+}
+
+.btnRegistrar{
+    background-color: #516b83a9;
+    border: none;
+    text-decoration: underline;
+}
+
+.btnRegistrar:hover{
+    background-color: #516b83;
+    border: none;
+    font-size: 18px;
+}
+
+.enlaceFormu{
+    background-color: white;
+    border: none;
+    margin-top: 1%;
+}
+
+.enlaceFormu:hover{
+    background-color: #516b83;
+    border: none;
+} 
+
+.texEnlaceForm{
+    color: #516b83a9;
+    text-decoration: underline;
+}
+
+.texEnlaceForm:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.modal{
+    margin-top: 7%;
+}
+
+
+/*INICIO Página Principal*/
 
 .body {
     background-color: #c7bcab;
@@ -17,8 +99,6 @@
     height: auto;
     padding-bottom: 3%;
 }
-
-/*INICIO*/
 
 .menuFijo{
     background-color: #ffffff;
@@ -329,7 +409,7 @@ footer {
     text-align: start;
     border-top: solid 1px white;
     border-bottom: solid 1px white;
-    margin-top: 5px;
+    margin-top: 5%;
     padding-top: 4px;
 }
 
@@ -357,14 +437,14 @@ footer {
     color: white;
 }
 
-.btn {
+.btnSuscribir {
     background-color: #000000;
     border: solid 3px #000000;
     color: white;
     margin-bottom: 2%;
 }
 
-.btn:hover {
+.btnSuscribir:hover {
     background-color: #90aac0;
     border: solid 3px #90aac0;
     color: white;
@@ -409,6 +489,11 @@ footer {
 
 
 /*Carrito*/
+#exampleModal{
+    overflow:scroll;
+    padding-bottom: 5%;
+}
+
 #items{
     margin-left: 2%;
     margin-right: 2%;
@@ -418,9 +503,20 @@ footer {
     padding-top: 2%;
 }
 
-.tituCarrito{
+.tituPasoCompra{
     color: #778c9e;
-    margin-left: 25%;
+    margin-left: 10%;
+}
+
+.numPasoCompra{
+    background-color: #778c9e;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #enlace_car {
@@ -444,6 +540,16 @@ footer {
     color: white;
 }
 
+.enlaceBotonFin{
+    color: white;
+    text-decoration: none;
+}
+
+.enlaceBotonFin:hover{
+    color: white;
+    text-decoration: none;
+}
+
 #boton-Fin:hover{
     background-color: #778c9e;
 }
@@ -454,83 +560,75 @@ footer {
     margin-top: 2%;
 }
 
-/*Formulario*/
-.contBienveFormu{
-    background-color: #516b83a9;
-    margin-top: 18%;
-    padding: 5%;
+/*Formulario Finalizar Compra*/
+
+.bodyFormuCompra{
+    background-color: #64798b7e;
 }
 
-.contTitu{
+.contGeneralFormuCompra{
+    padding-top: 10%;
+}
+
+.contFormuCompra{
+    padding: 10%;
+}
+
+.contFormasDePago{
+    margin-top: 20%;
+}
+
+.imgFormaPago{
+    width: 35px;
+    height: 35px;
+}
+
+.textFormaPago{
+    font-size: 16px;
+    font-weight: 500;
+    color: #212529;
+}
+
+.btnContinuarPago{
+    background-color: #212529;
+    border: white;
+    color: white;
+    padding: 2%;
+    margin-top: 10%;
+    font-size: 15px;
+    width: 60%;
+}
+
+.btnContinuarPago:hover{
+    background-color: #212529;
+    border: white;
+    color: white;
+    padding: 3%;
+    margin-top: 10%;
+}
+
+/*Formulario Pago*/
+.contPago{
+    width: 60%;
+    height: auto;
+    padding-top: 10%;
+}
+
+.contFormuPago{
+    background-color: #e6eaeeb9;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 4%;
+}
+
+.btnFinPago{
+    background-color: #212529;
+    border: white;
     color: white;
-    padding: 1%;
-    font-size: 28px;
-    text-decoration: underline;
+    padding: 3%;
+    margin-top: 10%;
+    font-size: 15px;
+    width: 85%;
 }
 
-.contBtn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.btnCompletarFor{
-    background-color:white;
-    border: solid 1px white;
-    color: #516b83a9;
-}
-
-.btnCompletarFor:hover{
-    background-color: #516b83a9;
-    border: solid 1px #516b83a9;
-    color: white;
-}
-
-.bodyFormu{
-    background-image: url(img/lavandas.jpg);
-}
-
-.tituModalFormu{
-    color: #516b83a9;
-    font-size: 20px;
-    margin-left: 10%;
-}
-
-.btnRegistrar{
-    background-color: #516b83a9;
-    border: none;
-    text-decoration: underline;
-}
-
-.btnRegistrar:hover{
-    background-color: #516b83;
-    border: none;
-    font-size: 18px;
-}
-
-.enlaceFormu{
-    background-color: white;
-    border: none;
-}
-
-.enlaceFormu:hover{
-    background-color: #516b83;
-    border: none;
-} 
-
-.texEnlaceForm{
-    color: #516b83a9;
-    text-decoration: underline;
-}
-
-.texEnlaceForm:hover{
-    color: white;
-    text-decoration: underline;
-}
-
-.modal{
-    margin-top: 7%;
-}

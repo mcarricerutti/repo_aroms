@@ -28,7 +28,7 @@ let lista
 //Llamamos elementos del html(en este caso todos son id)
 const DOMitems = document.querySelector('#items');
 const DOMcarrito = document.querySelector('#carrito');
-const DOMtotal = document.querySelector('#total');
+const DOMtotal = document.querySelector('.total');
 const DOMbotonVaciar = document.querySelector('#boton-vaciar');
 
 
@@ -225,25 +225,6 @@ return Carrito.reduce((total, item) => {
 }
 
 
-//Interacción del boton finalizar compra.
-let miBotonF = document.getElementById("boton-Fin");
-
-miBotonF.addEventListener("click", ejecutar);
-
-function ejecutar() {
-Swal.fire({
-    title: `Compra realizada con éxito!`,
-    color: `white`,
-    background: `#778c9e`,
-    confirmButtonColor: `grey`,
-    confirmButtonText: `✓`,
-    icon: 'success',
-})
-// }).then(() => {
-//     calcularTotal()>5000 ? Swal.fire({text:"En su compra tendrá un descuento"}): Swal.fire({text:"No tendrá descuento",})//Aplicando operador ternario
-//   })
-}
-
 
 /**
 * Vacía el carrito y vuelve a dibujarlo
@@ -272,6 +253,7 @@ function ordenar() {
     lista.innerHTML="";
     presentarProductos();
 }
+
 
 
 
