@@ -622,13 +622,7 @@ footer {
     padding: 4%;
 }
 
-.btnFinPago{
-    background-color: #212529;
-    border: white;
-    color: white;
-    padding: 3%;
-    margin-top: 10%;
-    font-size: 15px;
-    width: 85%;
+.contAlertFin {
+    background-color: #516b83;
 }
 

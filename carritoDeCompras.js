@@ -176,6 +176,8 @@ DOMtotal.textContent = `$` + calcularTotal();
 }
 
 
+
+
 /**
 * Evento para borrar un elemento del carrito
 */
@@ -223,7 +225,6 @@ return Carrito.reduce((total, item) => {
     return total + miItem[0].precio;
 }, 0).toFixed(2);
 }
-
 
 
 /**

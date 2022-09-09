@@ -14,14 +14,28 @@ function presentarCuotas(){
 }
 presentarCuotas();
 
-//PROBLEMA 3
-//Alerta que quiero que aparezca cuando se finalice la compra total
 
-let fin=document.querySelector(`#finCompra`);
-fin.onclick=()=>{
-    Swal.fire(
-        'Good job!',
-        'You clicked the button!',
-        'success'
-      )
+const DOMbtnFin=document.querySelector(`#btnFin`);
+
+const miBtnFin = document.createElement(`button`);
+miBtnFin.classList.add= `btn btnFinPago `;
+miBtnFin.type=`submit`;
+miBtnFin.id=`finCompra`;
+miBtnFin.style.backgroundColor=`#212529`;
+miBtnFin.style.color=`white`;
+miBtnFin.style.padding=`2%`;
+miBtnFin.style.marginTop=`2%`;
+miBtnFin.style.fontSize=`15px`;
+miBtnFin.style.border=`white`;
+miBtnFin.innerText=`FINALIZAR COMPRA ->`
+miBtnFin.addEventListener(`click`, alertFinCompra);
+
+DOMbtnFin.appendChild(miBtnFin);
+
+function alertFinCompra(){
+    Swal.fire({
+        text: '¡Compra realizada con éxito!   ✅',
+        showCancelButton: false,
+        showConfirmButton: false,
+    })
 }
