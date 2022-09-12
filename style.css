@@ -622,7 +622,9 @@ footer {
     padding: 4%;
 }
 
-.contAlertFin {
-    background-color: #516b83;
+#btnFin{
+    background-color: #000000;
+    color: white;
+    padding: 2%;
 }
 

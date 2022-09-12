@@ -1,24 +1,22 @@
-//PROBLEMA 2
-//Aqui quiero encontrar la manera de traer el total de la compra para ponerlo en las opciones de cuotas
-
 const DOMCuotas = document.getElementById(`cuotas`);
 function presentarCuotas(){
     const MisCuotas=document.getElementById(`cuotas`)
     MisCuotas.innerHTML=`
     <select class="form-select"  aria-label="Default select example">
-        <option value="1">1 x ${1200}</option>
-        <option value="2">3 x (${1200/3})</option>
-        <option value="3">6 x (${1200/6})</option>
+        <option value="default"> Cuotas </option>
+        <option value="1">x 1 </option>
+        <option value="2">x 3</option>
+        <option value="3">x 6</option>
     </select>
     `;
 }
 presentarCuotas();
 
 
-const DOMbtnFin=document.querySelector(`#btnFin`);
+const DOMbtnFin=document.querySelector(`#btnCorroborar`);
 
 const miBtnFin = document.createElement(`button`);
-miBtnFin.classList.add= `btn btnFinPago `;
+miBtnFin.classList.add= `btn btnFinPago form-control`;
 miBtnFin.type=`submit`;
 miBtnFin.id=`finCompra`;
 miBtnFin.style.backgroundColor=`#212529`;

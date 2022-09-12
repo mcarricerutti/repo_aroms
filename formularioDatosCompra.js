@@ -1,12 +1,14 @@
 //EVENTOS DE TECLADO
 
-let campoNombre=document.getElementById("nombres");
-let campoApellido=document.getElementById("apellido");
-let campoCalle=document.getElementById("calle");
-let campoNumero=document.getElementById("numero");
-let campoCodPostal=document.getElementById("codPostal");
-let campoProvincia=document.getElementById("provincia");
-let campoLocalidad=document.getElementById("localidad");
+let campoNombre=document.getElementById("nombreIn");
+let campoApellido=document.getElementById("apellidoIn");
+let campoCalle=document.getElementById("calleIn");
+let campoNumero=document.getElementById("numeroIn");
+let campoPiso=document.getElementById("pisoIn");
+let campoDpto=document.getElementById("dptoIn");
+let campoCodPostal=document.getElementById("codPostalIn");
+let campoProvincia=document.getElementById("provinciaIn");
+let campoLocalidad=document.getElementById("localidadIn");
 let campoNombreContacto=document.getElementById("nombreContacto");
 let campoDNI=document.getElementById("dni");
 let campoEmail=document.getElementById("mail");
@@ -60,10 +62,10 @@ campoNombreContacto.oninput=()=>{
     }
 }
 
+//Validamos los datos ingresados por el usuario
+let formularioCompra=document.getElementById("datosFormulario");
 
-let formularioCompra=document.getElementById("formuCompra");
 formularioCompra.addEventListener("submit",validarFormCompra);
-
 function validarFormCompra(ev){
     if((campoNombre.value=="")||(campoApellido.value=="")||(campoCalle.value=="")||(campoNumero.value=="")||(campoCodPostal.value=="")||(campoProvincia.value=="")||(campoLocalidad.value=="")||(campoNombreContacto.value=="")||(campoDNI.value=="")||(campoEmail.value=="")){
         ev.preventDefault();//Evita que se envie el form y que se vacien los campos
@@ -81,30 +83,5 @@ function validarFormCompra(ev){
 }
 
 
-//PROBLEMA 1
-//Aquí quiero que los datos ingresados por el usuario lleguen hasta aca, para luego simular que los cargos en una API----
 
-//POST
-function enviarDatos() {
-    const URLPOST = "https://jsonplaceholder.typicode.com/posts";
-    const objetoPost = {
-            "userId": campoNombre.value,
-            "id": campoApellido.value,
-            "title": campoCalle.value,
-            "body": campoNumero
-        }
-    fetch(URLPOST, {
-            method: "POST",
-            body: JSON.stringify(objetoPost),
-            headers: { "Content-type": "application/json; charset=utf-8",}
-    })
-        .then(respuesta => respuesta.json())
-        .then(datos => {
-            //Lo que retorna el servidor
-            console.log("DATA QUE RETORNA JSONPLACEHOLDER A POST");
-            console.log(datos)
-        })
-}
-
-enviarDatos();
 
