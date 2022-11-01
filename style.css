@@ -254,9 +254,8 @@ div .cardCarru .imageCarru img{
     position: absolute;
     height: 55%;
     width: 100%;
-    background: rgba(100, 101, 145, 0.836);
     border-radius: 20px 20px 0 0;
-}
+} 
 
 .cardCarru .contentCarru {
     display: flex;
